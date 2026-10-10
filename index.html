@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MiPCsano: una primera orientación sobre los indicadores de RAM, procesador, almacenamiento y batería de tu computadora Windows x64. Versión beta.">
+<meta name="theme-color" content="#f6f8f5">
+<title>MiPCsano · Conoce el estado de tu computadora</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/download-config.js" defer></script>
+<script src="assets/page.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="header shell">
+<a class="brand" href="#inicio" aria-label="MiPCsano, inicio"><span class="brand-mark" aria-hidden="true">✓</span>MiPCsano</a>
+<nav aria-label="Navegación principal"><a href="#que-revisa">Qué revisa</a><a href="#como-funciona">Cómo funciona</a><a href="#alcance">Alcance</a></nav>
+</header>
+<main id="contenido">
+<section class="hero shell" id="inicio">
+<div class="hero-content">
+<p class="eyebrow"><span class="beta">Versión beta</span><span>Una primera orientación</span></p>
+<h1>Conoce el estado de tu computadora <span>sin complicarte</span></h1>
+<p class="intro">MiPCsano revisa los indicadores disponibles de RAM, procesador, almacenamiento y batería. Te explica los resultados con palabras claras y te orienta sobre qué conviene revisar.</p>
+<div class="download-area">
+<a class="download-button" id="download-button" href="https://github.com/etrinidaddd/mipcsano/releases/download/v0.1.0-beta/MiPCsano-Setup.exe" download="MiPCsano-Setup.exe"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Descargar para Windows</a>
+<p class="platform"><strong>Solo para Windows de 64 bits (x64)</strong></p>
+</div>
+<p class="download-meta">Beta 0.1.0 <span aria-hidden="true">·</span> Instalador de <span id="download-size">44,4 MiB</span> <span aria-hidden="true">·</span> Incluye .NET 10</p>
+<p class="availability" id="download-status" role="status">Descarga del instalador desde GitHub. Lee los requisitos antes de instalar.</p>
+<p class="excluded">No está disponible para macOS, Linux, Android ni iPhone.</p>
+<details class="requirements" id="requisitos">
+<summary>Requisitos y compatibilidad de Windows</summary>
+<div>
+<p><strong>Windows 11 x64:</strong> 24H2, 25H2 y 26H1; 23H2 únicamente en Enterprise/Education, mientras mantenga soporte.</p>
+<p><strong>Windows 10 x64:</strong> solo las ediciones LTSC/Enterprise compatibles con .NET 10 (21H2, 1809 y 1607), según su ciclo de soporte. No se anuncia compatibilidad general con Windows 10 Home/Pro.</p>
+<p>Estas versiones corresponden a la plataforma .NET 10. <strong>MiPCsano se ha probado en Windows 11 25H2 x64;</strong> las demás versiones y ediciones requieren validación de esta beta.</p>
+<p>Necesita PowerShell de Windows y los proveedores de información del sistema disponibles. Algunas lecturas dependen del firmware, los controladores y los permisos. No necesitas instalar .NET ni el SDK por separado.</p>
+<a href="https://learn.microsoft.com/en-us/dotnet/core/install/windows#supported-versions" target="_blank" rel="noopener noreferrer">Consultar las versiones admitidas por Microsoft</a>
+<p class="small">Compatibilidad de la plataforma consultada el 9 de octubre de 2026.</p>
+</div>
+</details>
+</div>
+<aside class="hero-note" aria-label="Lo que puedes esperar">
+<div class="note-art" aria-hidden="true"><div class="monitor"><div class="monitor-screen"><span class="pulse">✓</span><span class="screen-line"></span><span class="screen-line short"></span></div><div class="monitor-stand"></div></div></div>
+<p class="note-label">Primero, entender.</p>
+<h2>Datos disponibles.<br>Pasos más claros.</h2>
+<p>Una lectura no cuenta toda la historia. Por eso verás qué se pudo consultar, qué falta por comprobar y cuál puede ser el siguiente paso.</p>
+<p class="note-foot">Consulta indicadores; no realiza reparaciones ni pruebas de estrés.</p>
+</aside>
+</section>
+
+<section class="section shell" id="que-revisa">
+<div class="section-heading"><p class="eyebrow">Cuatro componentes</p><h2>Qué revisa MiPCsano</h2><p>Una mirada a lo que el equipo informa. Los datos ausentes se muestran como tales.</p></div>
+<div class="component-grid">
+<article class="component"><span class="component-number">01</span><h3>Memoria RAM</h3><p>Capacidad utilizable, memoria disponible y uso actual. Consulta el inventario y la última prueba de memoria registrada en Windows, cuando están disponibles.</p><p class="limit">El uso normal no confirma la integridad física de la RAM.</p></article>
+<article class="component"><span class="component-number">02</span><h3>Procesador</h3><p>Carga puntual, núcleos y frecuencias reportadas por Windows o el firmware.</p><p class="limit">Las frecuencias no son una medición de la velocidad máxima real. No mide temperatura ni ejecuta pruebas de estrés.</p></article>
+<article class="component"><span class="component-number">03</span><h3>Almacenamiento</h3><p>Espacio libre y los indicadores de salud, desgaste o errores que el dispositivo permita consultar.</p><p class="limit">Un indicador normal no equivale a una prueba completa del disco ni descarta fallas futuras.</p></article>
+<article class="component"><span class="component-number">04</span><h3>Batería</h3><p>Carga restante y capacidades reportadas. Estima desgaste solo cuando los datos se pueden comparar.</p><p class="limit">No comprueba el cargador. Si tu computadora no tiene batería, su ausencia no se considera una falla.</p></article>
+</div>
+</section>
+
+<section class="how-section" id="como-funciona"><div class="shell section">
+<div class="section-heading"><p class="eyebrow">De la consulta a la orientación</p><h2>Tres pasos, sin complicarte</h2></div>
+<ol class="steps">
+<li><span class="step-number" aria-hidden="true">1</span><div><h3>Instala</h3><p>Abre MiPCsano-Setup.exe y sigue el asistente. Puedes elegir un acceso directo en el escritorio; también encontrarás la aplicación en Inicio.</p></div></li>
+<li><span class="step-number" aria-hidden="true">2</span><div><h3>Revisa</h3><p>Pulsa “Revisar mi computadora”. La aplicación muestra qué componente está consultando mientras completa la revisión.</p></div></li>
+<li><span class="step-number" aria-hidden="true">3</span><div><h3>Consulta tus resultados</h3><p>Lee el resumen y las tarjetas. Abre “¿Qué significa esto?” o “Ver detalles”, y guarda un informe si quieres conservarlo.</p></div></li>
+</ol></div></section>
+
+<section class="section shell" id="estados">
+<div class="section-heading"><p class="eyebrow">Color, icono y texto</p><h2>Cómo leer los resultados</h2><p>Un estado resume los indicadores consultados. No es una certificación de que todo esté sano.</p></div>
+<div class="states-grid">
+<article class="state"><span class="state-icon normal" aria-hidden="true">✓</span><div><h3>Normal según los datos consultados</h3><p>No se observaron alertas en los indicadores disponibles. Esto no descarta todas las fallas.</p></div></article>
+<article class="state"><span class="state-icon caution" aria-hidden="true">!</span><div><h3>Requiere otra prueba</h3><p>Hay un indicador, un síntoma o información incompleta que necesita más contexto.</p></div></article>
+<article class="state"><span class="state-icon fault" aria-hidden="true">×</span><div><h3>Posible falla</h3><p>Existe una advertencia o evidencia que conviene revisar. No identifica por sí sola la causa.</p></div></article>
+<article class="state"><span class="state-icon unknown" aria-hidden="true">?</span><div><h3>No determinado</h3><p>La consulta se intentó, pero no hay información suficiente para llegar a una conclusión.</p></div></article>
+</div>
+<p class="unanalysed"><span aria-hidden="true">○</span><strong>Sin analizar:</strong> todavía no se ha consultado ese componente. Es distinto de “no determinado”.</p>
+</section>
+
+<section class="section shell screenshot-section" id="aplicacion">
+<div class="section-heading"><p class="eyebrow">Así se ve</p><h2>La aplicación, por dentro</h2><p>Resumen, explicaciones y detalles en el mismo lugar.</p></div>
+<figure><a href="assets/mipcsano-captura.png" target="_blank" rel="noopener" aria-label="Abrir la captura real en tamaño completo"><img src="assets/mipcsano-captura.png" alt="Captura real de MiPCsano al abrirse, con el botón Revisar mi computadora, el resumen general y los componentes sin analizar." width="1375" height="1075" loading="lazy"></a><figcaption>Captura real de MiPCsano en Windows 11, antes de ejecutar un análisis. No muestra resultados de un diagnóstico. Puedes abrirla en tamaño completo.</figcaption></figure>
+</section>
+
+<section class="scope shell" id="alcance">
+<p class="eyebrow">Una herramienta en desarrollo</p><h2>Alcance y próximas mejoras</h2>
+<p>MiPCsano está pensado para personas que no están familiarizadas con los aspectos técnicos de su computadora y necesitan una primera orientación sobre su estado.</p>
+<p>Sus resultados se basan en los datos disponibles del equipo. No detecta todas las fallas ni sustituye las pruebas específicas o la revisión de un técnico.</p>
+<p>Esta versión beta continúa en desarrollo. Se incorporarán mejoras de claridad, compatibilidad y diagnóstico conforme se prueben y validen.</p>
+</section>
+</main>
+<footer class="footer shell"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">✓</span>MiPCsano</a><p>Versión beta 0.1.0 · Aplicación para Windows x64</p><p id="publication-status">Instalador beta · Descarga desde GitHub.</p></footer>
+</body>
+</html>
+
+
+
+
